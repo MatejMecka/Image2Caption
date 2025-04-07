@@ -1,0 +1,31 @@
+{
+  "name": "image2caption",
+  "version": "1.0.0",
+  "description": "Convert images to an accessible caption",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "rollup -c",
+    "buildweb": "webpack",
+    "dev": "webpack --watch"
+  },
+  "author": "Matej Plavevski",
+  "license": "MIT",
+  "type": "module",
+  "devDependencies": {
+    "copy-webpack-plugin": "^13.0.0",
+    "html-webpack-plugin": "^5.6.3",
+    "rollup": "^2.79.2",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-terser": "^7.0.2",
+    "webpack": "^5.98.0",
+    "webpack-cli": "^6.0.1"
+  },
+  "dependencies": {
+    "@huggingface/transformers": "^3.3.3",
+    "@xenova/transformers": "^2.17.2",
+    "onnxruntime-web": "^1.21.0-dev.20250206-d981b153d3",
+    "rollup-plugin-copy": "^3.5.0"
+  }
+}

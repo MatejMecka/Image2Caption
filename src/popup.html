@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="popup.css">
+    </head>
+    <body>
+        <h1>Hello to Image2Caption!</h1>
+        <h3><b class="isSupported"></b></h3>
+        <hr>
+        <h3><b class="status">Unknown</b></h3>
+        <hr>
+        <h1>Select a Model: </h1>
+        <select id="model-picker">
+            <option value="onnx-community/Janus-Pro-1B-ONNX">DeepSeek Janus</option>
+            <option value="HuggingFaceTB/SmolVLM-256M-Instruct">SmolVLM</option>
+        </select>
+        <h1 id="selected-model">Selected Model: </h1>
+    </body>
+    <script src="popup.js"></script>
+</html>

@@ -1,0 +1,28 @@
+{
+    "manifest_version": 2,
+    "name": "Image2Caption",
+    "version": "1.0",
+    "background": {
+      "scripts": ["background.js"]
+    },
+    "content_scripts": [
+      {
+        "matches": ["<all_urls>"],
+        "js": ["content.js"],
+        "all_frames": true
+      }
+    ],
+    "host_permissions": [ "<all_urls>" ],
+    "icons": {
+        "48": "./icons/icon48.png",
+        "96": "./icons/icon96.png"
+    },
+    "permissions": ["storage", "contextMenus", "<all_urls>", "scripting", "activeTab"],
+    "browser_action": {
+        "default_popup": "popup.html",
+        "default_title": "Image2Caption",
+        "default_icon": "./icons/icon48.png"
+    },
+    "content_security_policy": "script-src 'self' 'wasm-unsafe-eval' https://cdn.jsdelivr.net; object-src 'self'"
+
+  }
