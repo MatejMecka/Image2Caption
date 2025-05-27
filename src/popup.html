@@ -4,16 +4,31 @@
     </head>
     <body>
         <h1>Hello to Image2Caption!</h1>
-        <h3><b class="isSupported"></b></h3>
+        <hr>
+        <h3>WebGPU support: <b class="isSupported"></b></h3>
         <hr>
         <h3><b class="status">Unknown</b></h3>
+        
+        <!-- Progress container -->
+        <div id="progress-container" style="display: none;">
+            <h4>Loading Progress:</h4>
+            <div id="loading-message"></div>
+            <div id="progress-items"></div>
+        </div>
+        
         <hr>
         <h1>Select a Model: </h1>
         <select id="model-picker">
             <option value="onnx-community/Janus-Pro-1B-ONNX">DeepSeek Janus</option>
-            <option value="HuggingFaceTB/SmolVLM-256M-Instruct">SmolVLM</option>
+            <option value="HuggingFaceTB/SmolVLM-256M-Instruct">SmolVLM - 256M</option>
+            <option value="HuggingFaceTB/SmolVLM-500M-Instruct">SmolVLM - 500M</option>
+            <option value="Xenova/moondream2">Moondream</option>
+            <option value="onnx-community/Florence-2-base-ft">Florence</option>
         </select>
         <h1 id="selected-model">Selected Model: </h1>
+        <hr>
+        <h4>Custom Prompt</h4>
+        <textarea id="customPrompt" type="text"></textarea>
     </body>
     <script src="popup.js"></script>
 </html>

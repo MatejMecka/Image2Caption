@@ -39,3 +39,134 @@ select:hover {
     font-size: 18px;
     font-weight: bold;
 }
+
+.row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+
+/* Form elements */
+select, textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #d1d5db;
+    border-radius: 4px;
+    font-size: 0.875rem;
+    background-color: #ffffff;
+}
+
+select {
+    height: 36px;
+}
+
+textarea {
+    min-height: 60px;
+    resize: vertical;
+    font-family: inherit;
+}
+
+/* Progress container */
+#progress-container {
+    background-color: #f9fafb;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    padding: 12px;
+    margin: 12px 0;
+}
+
+#progress-container h4 {
+    margin: 0 0 8px 0;
+    color: #374151;
+    font-weight: 600;
+}
+
+#loading-message {
+    font-size: 0.875rem;
+    color: #6b7280;
+    margin-bottom: 8px;
+}
+
+/* Progress bars */
+.progress-bar {
+    width: 100%;
+    background-color: #f3f4f6;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 4px;
+    border: 1px solid #e5e7eb;
+}
+
+.progress-fill {
+    background: linear-gradient(90deg, #3b82f6, #60a5fa);
+    color: white;
+    white-space: nowrap;
+    padding: 4px 8px;
+    font-size: 0.75rem;
+    font-weight: 500;
+    transition: width 0.3s ease;
+    min-height: 20px;
+    display: flex;
+    align-items: center;
+}
+
+/* Status indicators */
+.isSupported {
+    color: #059669;
+}
+
+.status {
+    color: #dc2626;
+}
+
+.status:has-text("Model Ready") {
+    color: #059669;
+}
+
+.status:has-text("Loading") {
+    color: #d97706;
+}
+
+/* Model selection */
+#selected-model {
+    font-size: 0.875rem;
+    color: #6b7280;
+    margin: 8px 0;
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #1f2937;
+        color: #f9fafb;
+    }
+    
+    select, textarea {
+        background-color: #374151;
+        border-color: #4b5563;
+        color: #f9fafb;
+    }
+    
+    hr {
+        border-color: #4b5563;
+    }
+    
+    #progress-container {
+        background-color: #374151;
+        border-color: #4b5563;
+    }
+    
+    .progress-bar {
+        background-color: #4b5563;
+        border-color: #6b7280;
+    }
+    
+    #loading-message {
+        color: #9ca3af;
+    }
+    
+    #selected-model {
+        color: #9ca3af;
+    }
+}

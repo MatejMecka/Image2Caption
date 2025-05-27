@@ -26,3 +26,12 @@ export const generateMessage = function(image_url, custom_prompt) {
 
     return message_to_browser
 }
+
+export const hasFp16 = async function() {
+    try {
+        const adapter = await navigator.gpu.requestAdapter();
+        return adapter.features.has('shader-f16');
+    } catch (e) {
+        return false;
+    }
+}
